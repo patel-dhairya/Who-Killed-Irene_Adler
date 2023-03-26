@@ -1,5 +1,11 @@
 class Character:
     def __init__(self, name: str, description: str):
+        """
+        Constructor method to initialize a new Character object with a name, description, is_killer property set to
+        False, and in_game property set to True.
+        :param name (str): Name of character
+        :param description (str): Description of character
+        """
         self._name = name
         self._description = description
         self._is_killer = False

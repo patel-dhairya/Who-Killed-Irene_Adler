@@ -1,5 +1,11 @@
 class Weapon:
     def __init__(self, name: str, description: str):
+        """
+        Constructor method to initialize a new weapon object with a name, description and is_murder_weapon property set
+        to False.
+        :param name (str): Name of weapon
+        :param description (str): Description of weapon
+        """
         self._name = name
         self._description = description
         self._is_murder_weapon = False
