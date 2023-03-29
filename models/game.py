@@ -19,15 +19,19 @@ class Game:
         self._board.append("|" + "_" * (width - 2) + "|")
 
     def draw_board(self):
-        for row in self._board:
-            print(row)
+        return self._board
 
-    def replace_character(self, y, x, character):
+    def replace_character(self, y, x, symbol):
         location = list(self._board[y])
-        location[x] = character
+        location[x] = symbol
         new_string = "".join(location)
         self._board[y] = new_string
 
+    def replace_multi_lines(self, y, x, symbols: list):
+        location = list(self._board[y])
+        location[x:len(symbols)] = symbols
+        new_string = "".join(location)
+        self._board[y] = new_string
 
 # New = Game()
 # New.replace_character(16, 75, "S")

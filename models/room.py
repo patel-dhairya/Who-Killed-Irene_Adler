@@ -9,6 +9,7 @@ class Room:
         self._name = name
         self._description = description
         self._is_crime_scene = False
+        self._design = []
         self._secret_passage = []
 
     # Getter method to retrieve the name of the room
@@ -32,3 +33,9 @@ class Room:
 
     def is_passage_available(self) -> bool:
         return len(self._secret_passage) != 0
+
+    def set_design(self, layout: list):
+        self._design = layout
+
+    def get_design(self) -> list:
+        return self._design
